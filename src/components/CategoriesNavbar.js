@@ -8,8 +8,8 @@ const CategoriesNavbar = () => {
                 {({ open }) => (
                     <>
                         <Popover.Button className={` ${open ? '' : 'text-opacity-90'}
-                 group inline-flex items-center border-b-2 border-gray-300 px-5 py-2 text-base font-medium text-black 
-                 hover:text-opacity-100 focus:border-red-700 focus:outline-none
+                 group inline-flex items-center border-b-2 border-white hover:border-red-700 px-5 py-2 text-base font-medium text-black 
+                 hover:text-opacity-100 focus:outline-none
                 
                 `}
                         >
@@ -88,8 +88,8 @@ const CategoriesNavbar = () => {
                 {({ open }) => (
                     <>
                         <Popover.Button className={` ${open ? '' : 'text-opacity-90'}
-                group inline-flex items-center border-b-2 border-gray-300 px-5 py-2 text-base font-medium text-black 
-                 hover:text-opacity-100 focus:border-red-700 focus:outline-none`}
+                group inline-flex items-center border-b-2 border-white hover:border-red-700 px-5 py-2 text-base font-medium text-black 
+                 hover:text-opacity-100 focus:outline-none`}
                         >
                             <span>CATS</span>
                         </Popover.Button>
@@ -165,8 +165,8 @@ const CategoriesNavbar = () => {
                 {({ open }) => (
                     <>
                         <Popover.Button className={` ${open ? '' : 'text-opacity-90'}
-                 group inline-flex items-center border-b-2 border-gray-300 px-5 py-2 text-base font-medium text-black 
-                 hover:text-opacity-100 focus:border-red-700 focus:outline-none
+                 group inline-flex items-center border-b-2 border-white hover:border-red-700 px-5 py-2 text-base font-medium text-black 
+                 hover:text-opacity-100 focus:outline-none
                 
                 `}
                         >

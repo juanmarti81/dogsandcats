@@ -8,10 +8,6 @@ function App() {
   return (
     <div className="w-full h-screen">
       <Navbar />
-        {/*<div className="w-full flex flex-row items-center place-content-center">*/}
-        {/*    <CategoriesNavbar />*/}
-        {/*</div>*/}
-
         <div className="w-full place-content-center flex pt-10 pb-10">
             <ItemListContainer />
         </div>
