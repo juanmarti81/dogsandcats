@@ -1,17 +1,39 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import ReactDOM from "react-dom/client";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+import "./index.css";
+import {BrowserRouter, Routes, Route} from "react-router-dom";
+
+import App from "./App";
+import Admin from "./admin/admin";
+import Products from "./admin/pages/Products";
+import Categories from "./admin/pages/Categories";
+import reportWebVitals from "./reportWebVitals";
+import "flowbite";
+import Home from "./pages/Home";
+import ProductCreate from "./admin/pages/ProductCreate";
+import ProductDetail from "./pages/ProductDetail";
+import {CartContextProvider} from "./store/CartContext";
+import Cart from "./pages/Cart";
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+  <CartContextProvider>
+    <BrowserRouter>
+      <Routes>
+        <Route element={<App />} path="/">
+          <Route index element={<Home />} />
+          <Route element={<ProductDetail />} path="/Product/:id" />
+          <Route element={<Cart />} path="/cart" />
+        </Route>
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+        <Route element={<Admin />} path="/admin">
+          <Route element={<Products />} path="/admin/products" />
+          <Route element={<Categories />} path="/admin/categories" />
+          <Route element={<ProductCreate />} path="/admin/newproduct" />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  </CartContextProvider>,
+);
 reportWebVitals();
